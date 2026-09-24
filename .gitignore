@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.vscode/
+
+# Local/private images are not committed
+images/private/
+images/downloaded/
+
+
