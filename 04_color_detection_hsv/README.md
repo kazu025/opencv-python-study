@@ -4,12 +4,12 @@
 
 ## サンプル一覧
 
-| ファイル | 旧ファイル名 | 学習内容 |
-| --- | --- | --- |
-| [01_hsv_blue_mask.py](01_hsv_blue_mask.py) | image_view_12.py | 青色マスクの作成と青色領域の外接長方形 |
-| [02_bitwise_and.py](02_bitwise_and.py) | image_view_13.py | マスクを使った青色部分のカラー抽出 |
-| [03_blue_object_detection.py](03_blue_object_detection.py) | image_view_14.py | 青色物体の位置・大きさ・中心の取得 |
-| [04_multi_color_detection.py](04_multi_color_detection.py) | image_view_15.py | 赤・緑・青・黄の物体検出 |
+| ファイル | 学習内容 |
+| --- | --- |
+| [01_hsv_blue_mask.py](01_hsv_blue_mask.py) | 青色マスクの作成と青色領域の外接長方形 |
+| [02_bitwise_and.py](02_bitwise_and.py) | マスクを使った青色部分のカラー抽出 |
+| [03_blue_object_detection.py](03_blue_object_detection.py) | 青色物体の位置・大きさ・中心の取得 |
+| [04_multi_color_detection.py](04_multi_color_detection.py) | 赤・緑・青・黄の物体検出 |
 
 ## 入力と前提
 

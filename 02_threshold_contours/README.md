@@ -4,17 +4,17 @@
 
 ## サンプル一覧
 
-| ファイル | 旧ファイル名 | 学習内容 |
-| --- | --- | --- |
-| [01_threshold.py](01_threshold.py) | image_view_02.py | しきい値128による二値化 |
-| [02_find_contours.py](02_find_contours.py) | image_view_03.py | 外側の輪郭の検出と描画 |
-| [03_contour_area.py](03_contour_area.py) | image_view_04.py | 面積による小さな輪郭の除外 |
-| [04_bounding_rect.py](04_bounding_rect.py) | image_view_05.py | 外接長方形の位置と大きさ |
-| [05_rect_center.py](05_rect_center.py) | image_view_06.py | 外接長方形の中心座標 |
-| [06_moments_centroid.py](06_moments_centroid.py) | image_view_07.py | 輪郭の重心と外接長方形の中心の比較 |
-| [07_min_area_rect.py](07_min_area_rect.py) | image_view_08.py | 回転を許した最小面積長方形 |
-| [08_rect_direction.py](08_rect_direction.py) | image_view_09.py | 長辺の向きと角度の可視化 |
-| [09_rect_direction_inverted.py](09_rect_direction_inverted.py) | image_view_10.py | 白背景・黒図形を反転二値化し、長辺の向きを可視化 |
+| ファイル | 学習内容 |
+| --- | --- |
+| [01_threshold.py](01_threshold.py) | しきい値128による二値化 |
+| [02_find_contours.py](02_find_contours.py) | 外側の輪郭の検出と描画 |
+| [03_contour_area.py](03_contour_area.py) | 面積による小さな輪郭の除外 |
+| [04_bounding_rect.py](04_bounding_rect.py) | 外接長方形の位置と大きさ |
+| [05_rect_center.py](05_rect_center.py) | 外接長方形の中心座標 |
+| [06_moments_centroid.py](06_moments_centroid.py) | 輪郭の重心と外接長方形の中心の比較 |
+| [07_min_area_rect.py](07_min_area_rect.py) | 回転を許した最小面積長方形 |
+| [08_rect_direction.py](08_rect_direction.py) | 長辺の向きと角度の可視化 |
+| [09_rect_direction_inverted.py](09_rect_direction_inverted.py) | 白背景・黒図形を反転二値化し、長辺の向きを可視化 |
 
 ## 入力と前提
 

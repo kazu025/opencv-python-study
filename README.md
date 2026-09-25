@@ -11,9 +11,6 @@ Python・OpenCV・NumPyで画像処理の基礎を学ぶための16本のサン�
 | [03_shape_detection](03_shape_detection/README.md) | 多角形近似・縦横比・円形度による図形判定 | 1 |
 | [04_color_detection_hsv](04_color_detection_hsv/README.md) | HSVマスク・カラー抽出・物体検出 | 4 |
 
-各章のREADMEに旧ファイル名と新ファイル名の対応を記載しています。
-旧 `image_view_10.py` は反転二値化による方向検出なので、第2章に分類しています。
-
 ## 環境の準備（Windows / PowerShell）
 
 Pythonをインストールし、リポジトリ直下で以下を実行します。

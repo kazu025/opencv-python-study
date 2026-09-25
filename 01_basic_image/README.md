@@ -4,10 +4,10 @@
 
 ## サンプル一覧
 
-| ファイル | 旧ファイル名 | 学習内容 |
-| --- | --- | --- |
-| [01_read_image.py](01_read_image.py) | image_view_00.py | 画像の読み込み・表示、配列の型・サイズ・画素値 |
-| [02_pixel_value_grayscale.py](02_pixel_value_grayscale.py) | image_view_01.py | BGR画素値とグレースケール変換 |
+| ファイル | 学習内容 |
+| --- | --- |
+| [01_read_image.py](01_read_image.py) | 画像の読み込み・表示、配列の型・サイズ・画素値 |
+| [02_pixel_value_grayscale.py](02_pixel_value_grayscale.py) | BGR画素値とグレースケール変換 |
 
 ## 入力と前提
 

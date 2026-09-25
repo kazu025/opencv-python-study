@@ -4,9 +4,9 @@
 
 ## サンプル一覧
 
-| ファイル | 旧ファイル名 | 学習内容 |
-| --- | --- | --- |
-| [01_shape_detection.py](01_shape_detection.py) | image_view_11.py | 多角形近似・縦横比・円形度による図形判定 |
+| ファイル | 学習内容 |
+| --- | --- |
+| [01_shape_detection.py](01_shape_detection.py) | 多角形近似・縦横比・円形度による図形判定 |
 
 ## 入力と前提
 
