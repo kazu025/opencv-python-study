@@ -21,12 +21,14 @@
   緑 : 輪郭そのものの重心
 '''
 
+from pathlib import Path
+
 import cv2
 
-image = cv2.imread("images/sample02.jpg")
+image = cv2.imread(str(Path(__file__).resolve().parents[1] / "images" / "private" / "sample02.jpg"))
 
 if image is None:
-    print("Error: Could not read the image.")
+    print("Error: Could not read the image. Check images/private (see README.md).")
     exit()
 # グレースケール画像に変換
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)

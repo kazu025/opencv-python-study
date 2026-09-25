@@ -1,25 +1,25 @@
 '''
-輪郭を外接長方形で囲み、その中心座標を求める
+輪郭を長方形で囲み、位置と大きさを取得する
   : cv2.boundingRect()
-  : cv2.circle()
 
 処理の流れ
   1. 画像を読み込む
-  2. グレースケール化する
+  2. グレースケール画像へ変換する
   3. 二値化する
   4. 輪郭を検出する
-  5. 小さな輪郭を除外する
-  6. 輪郭を囲む長方形 x, y, w, h を求める
-  7. 長方形の中心座標を計算する
-  8. 長方形と中心座標を元画像に描画する
+  5. 小さな輪郭を面積で除外する
+  6. 輪郭を囲む長方形の x, y, w, h を取得する
+  7. 元画像に長方形を描画する
 '''
+
+from pathlib import Path
 
 import cv2
 
-image = cv2.imread("images/sample02.jpg")
+image = cv2.imread(str(Path(__file__).resolve().parents[1] / "images" / "private" / "sample02.jpg"))
 
 if image is None:
-    print("Error: Could not read the image.")
+    print("Error: Could not read the image. Check images/private (see README.md).")
     exit()
 # グレースケール画像に変換
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -54,21 +54,17 @@ for i, contour in enumerate(contours):
     if area < MIN_AREA:
         # 面積が一定以下の輪郭は除外する
         continue
+
     # 輪郭を囲む長方形の x, y, w, h を取得する
     x, y, w, h = cv2.boundingRect(contour)
-    # 長方形の中心座標を計算する
-    center_x = x + w // 2
-    center_y = y + h // 2
     print(
         f"輪郭[{i:4d}] "
         f"(area={area:9.1f}) の長方形座標: "
         f"x={x:4d}, y={y:4d}, w={w:4d}, h={h:4d}"
-        f", 中心座標: ({center_x:4d}, {center_y:4d})"
     )
     # 元画像に長方形を描画する
     cv2.rectangle(result_image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-    # 元画像に中心座標を描画する
-    cv2.circle(result_image, (center_x, center_y), 6, (255, 0, 0), -1)
+
 
 cv2.imshow("Original Image", image)
 cv2.imshow("Binary Image", binary_image)

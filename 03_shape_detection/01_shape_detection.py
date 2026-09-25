@@ -21,16 +21,18 @@
   頂点数 5以上 : Circle / Ellipse候補
 '''
 
+from pathlib import Path
+
 import cv2
 import math
 
 # -------------------------------------------------------------------
 # 画像を読み込む
 # -------------------------------------------------------------------
-image = cv2.imread("images/sample03.jpg")
+image = cv2.imread(str(Path(__file__).resolve().parents[1] / "images" / "private" / "sample03.jpg"))
 
 if image is None:
-    print("Error: Could not read the image.")
+    print("Error: Could not read the image. Check images/private (see README.md).")
     exit()
 
 # -------------------------------------------------------------------
