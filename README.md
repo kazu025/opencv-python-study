@@ -1,6 +1,6 @@
 # OpenCV Python Study
 
-Python・OpenCV・NumPyで画像処理の基礎を学ぶための23本のサンプルです（第1〜5章。補助スクリプトを除く）。
+Python・OpenCV・NumPyで画像処理の基礎を学ぶための38本のサンプルです（第1〜6章。補助スクリプトを除く）。
 
 ## 学習の順序
 
@@ -11,6 +11,7 @@ Python・OpenCV・NumPyで画像処理の基礎を学ぶための23本のサン�
 | [03_shape_detection](03_shape_detection/README.md) | 多角形近似・縦横比・円形度による図形判定 | 1 |
 | [04_color_detection_hsv](04_color_detection_hsv/README.md) | HSVマスク・カラー抽出・物体検出 | 4 |
 | [05_edge_detection](05_edge_detection/README.md) | Cannyエッジ検出・閾値比較・GaussianBlur・輪郭取得・面積フィルタ | 7 |
+| [06_video](06_video/README.md) | 動画の読み込み・フレーム処理・輪郭・色検出 | 15 |
 
 ## ディレクトリ構成
 
@@ -21,6 +22,8 @@ Python・OpenCV・NumPyで画像処理の基礎を学ぶための23本のサン�
 ├── 03_shape_detection/
 ├── 04_color_detection_hsv/
 ├── 05_edge_detection/
+├── 06_video/
+├── 07_usb_camera/
 ├── docs/
 ├── images/
 ├── scripts/
@@ -39,6 +42,12 @@ Cannyの閾値、背景との明暗差、GaussianBlurの有無とカーネルサ
 面積条件を通過した大きな長方形と円の2つに赤い輪郭を描きます。
 端末に表示する「検出した輪郭数」はフィルタ前の件数です。
 今回の図形では面積閾値を500から1000に変更しても、条件を通過する輪郭は2つのままです。
+
+## 第6章：動画処理
+
+[06_video](06_video/README.md)では、動画をフレーム単位で読み込み、
+グレースケール化、二値化、輪郭検出、図形判定、HSV色検出を行います。
+入力動画は `images/private/sample01.mp4` に保存してください。
 
 ## 環境の準備（Windows / PowerShell）
 
@@ -77,6 +86,7 @@ py -m venv .venv
 .\.venv\Scripts\python.exe .\01_basic_image\01_read_image.py
 .\.venv\Scripts\python.exe .\04_color_detection_hsv\04_multi_color_detection.py
 .\.venv\Scripts\python.exe .\05_edge_detection\07_contour_filter.py
+.\.venv\Scripts\python.exe .\06_video\01_basic_video\01_read_video.py
 ```
 
 画像ウィンドウにフォーカスを合わせてキーを押すと終了します。
