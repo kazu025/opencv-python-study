@@ -1,6 +1,6 @@
 # OpenCV Python Study
 
-Python・OpenCV・NumPyで画像処理の基礎を学ぶための53本のサンプルです（第1〜7章。補助スクリプトを除く）。
+Python・OpenCV・NumPyで画像処理の基礎を学ぶための68本のサンプルです（第1〜8章。顔検出1本は保留、補助スクリプトを除く）。
 
 ## 学習の順序
 
@@ -13,6 +13,7 @@ Python・OpenCV・NumPyで画像処理の基礎を学ぶための53本のサン�
 | [05_edge_detection](05_edge_detection/README.md) | Cannyエッジ検出・閾値比較・GaussianBlur・輪郭取得・面積フィルタ | 7 |
 | [06_video](06_video/README.md) | 動画の読み込み・フレーム処理・輪郭・色検出 | 15 |
 | [07_usb_camera](07_usb_camera/README.md) | カメラ映像の読み込み・二値化・輪郭・図形判定・色検出 | 15 |
+| [08_mini_project](08_mini_project/README.md) | 色物体の検出・動体検出・動画保存・移動軌跡・映像比較 | 15（うち1本保留） |
 
 ## ディレクトリ構成
 
@@ -25,6 +26,7 @@ Python・OpenCV・NumPyで画像処理の基礎を学ぶための53本のサン�
 ├── 05_edge_detection/
 ├── 06_video/
 ├── 07_usb_camera/
+├── 08_mini_project/
 ├── docs/
 ├── images/
 ├── scripts/
@@ -60,6 +62,26 @@ Cannyの閾値、背景との明暗差、GaussianBlurの有無とカーネルサ
 入力画像や動画ファイルの用意は不要です。
 `camera_number = 0` でカメラを指定し、複数のカメラがある場合は番号を変更してください。
 各フレームで検出を行う学習用サンプルで、同じ物体を継続して追跡する機能はありません。
+
+## 第8章：小さなOpenCVプロジェクト
+
+[08_mini_project](08_mini_project/README.md)では、これまで学んだ画像処理を組み合わせ、
+青色物体の検出、移動軌跡の描画、背景差分による動体検出を行います。
+さらに、カメラ映像の録画と、加工した動画の保存を学びます。
+
+まず `04_save_video.py` でカメラ映像を録画し、
+`images/private/camera_record.mp4` を作成してください。
+`05`〜`15` のサンプルは、この動画を読み込んで処理します。
+
+グレースケール化、二値化、エッジ検出、輪郭検出、色検出、動体検出の結果を
+MP4として保存します。フレーム番号・動画内の経過時間の表示、
+動画サイズの変更、元映像と加工映像の比較も行います。
+
+入力・出力動画は `images/private/` に保存し、GitHubには公開しません。
+同名の出力動画は再実行時に上書きされます。音声は保存しません。
+
+`03_face_detection.py` は、現在の環境で `cv2.CascadeClassifier` が
+利用できないため保留しています。
 
 ## 環境の準備（Windows / PowerShell）
 
@@ -100,11 +122,17 @@ py -m venv .venv
 .\.venv\Scripts\python.exe .\05_edge_detection\07_contour_filter.py
 .\.venv\Scripts\python.exe .\06_video\01_basic_video\01_read_video.py
 .\.venv\Scripts\python.exe .\07_usb_camera\01_open_camera.py
+.\.venv\Scripts\python.exe .\08_mini_project\04_save_video.py
+.\.venv\Scripts\python.exe .\08_mini_project\15_compare_video.py
 ```
 
 静止画像のサンプルは、画像ウィンドウにフォーカスを合わせてキーを押すと終了します。
 第6・7章は、表示ウィンドウで `q` または `Esc` を押すと終了します。
 読み込みエラーが出る場合は、入力画像の配置とファイル名を確認してください。
+
+第8章は、表示ウィンドウで `q` を押すと終了します。
+動画ファイルを処理するサンプルは、動画の末尾でも終了します。
+途中で終了した場合、そこまでの映像が保存されます。
 
 ## Gitで管理しないファイル
 
